@@ -1,6 +1,10 @@
 from flask import Flask, request
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 
 usuarios = [
     {"login": "Steicy",
@@ -19,9 +23,10 @@ usuarios = [
 
 @app.route("/")
 def home():
-    return "Hello, World! editado"
+    return "Pay-mee"
 
 @app.route("/login", methods = ["POST"])
+@cross_origin()
 def login():
     data = request.get_json()
     login = data["login"]
