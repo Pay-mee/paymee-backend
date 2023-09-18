@@ -5,13 +5,13 @@ app = Flask(__name__)
 usuarios = [
     {"login": "Steicy",
      "password": "1234",
-     "role": "admin"},
+     "role": "manager"},
     {"login": "Gabriel",
      "password": "1234",
-     "role": "admin"},
+     "role": "user"},
     {"login": "Lucas",
      "password": "1234",
-     "role": "user"},
+     "role": "contability"},
     {"login": "William",
      "password": "1234",
      "role": "user"}
